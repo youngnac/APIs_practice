@@ -5,9 +5,11 @@
 
         <span>{{ user.username }}님으로 로그인 되었습니다</span>
         <a href="{% url 'member:logout' %}">로그아웃</a>
-        {% else %}
-        <a href="{% url 'member:login' %}">로그인</a>
-        {% endif %}
+        <a href="{{ auth_uri_2 }}">email</a>
 
+        {% else %}
+        <a href="{{ auth_uri }}">login</a>
+
+        {% endif %}
     </div>
 </div>
